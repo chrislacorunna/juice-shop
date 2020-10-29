@@ -135,7 +135,7 @@ export class SearchResultComponent implements OnDestroy, AfterViewInit {
   }
 
   getSafeHtmlSearchValue () {
-    return return this.sanitizer.bypassSecurityTrustHtml(this.route.snapshot.queryParams.q);
+    return this.sanitizer.bypassSecurityTrustHtml(this.route.snapshot.queryParams.q);
   }
 
   filterTable () {
