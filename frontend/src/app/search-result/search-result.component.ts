@@ -133,6 +133,10 @@ export class SearchResultComponent implements OnDestroy, AfterViewInit {
     }
   }
 
+  getSafeHtmlSearchValue () {
+    return this.searchValue.replace(/[^a-zA-Z0-9]+/, '');
+  }
+
   filterTable () {
     let queryParam: string = this.route.snapshot.queryParams.q
     if (queryParam) {
