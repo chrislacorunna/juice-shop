@@ -135,7 +135,7 @@ export class SearchResultComponent implements OnDestroy, AfterViewInit {
   }
 
   getSafeHtmlSearchValue () {
-    return this.searchValue.toString().replace(/[^a-zA-Z0-9]+/, '');
+    return return this.sanitizer.bypassSecurityTrustHtml(this.route.snapshot.queryParams.q);
   }
 
   filterTable () {
