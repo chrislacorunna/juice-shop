@@ -26,6 +26,7 @@ import { DeluxeGuard } from '../app.guard'
 library.add(faEye, faCartPlus)
 dom.watch()
 
+
 interface TableEntry {
   name: string
   price: number
@@ -134,7 +135,7 @@ export class SearchResultComponent implements OnDestroy, AfterViewInit {
   }
 
   getSafeHtmlSearchValue () {
-    return this.searchValue.SafeHtml.replace(/[^a-zA-Z0-9]+/, '');
+    return this.searchValue.toString().replace(/[^a-zA-Z0-9]+/, '');
   }
 
   filterTable () {
