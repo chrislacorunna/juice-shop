@@ -25,7 +25,31 @@
     - fullName: 'Administrator'
       cardNum: 4024007105648108
       expMonth: 4
-      expYear: 2086      
+      expYear: 2086
+-
+  email: ronig
+  password: 'przewrotka'
+  key: ronig
+  role: 'admin'
+  securityQuestion:
+    id: 2
+    answer: 'pileczka'
+  feedback:
+    comment: 'Nice shophinho! ~Ronaldinho'
+    rating: 4
+  address:
+    - fullName: 'RonaldinhoG'
+      mobileNum: 1234527890
+      zipCode: '4711'
+      streetAddress: '0816 Test Street'
+      city: 'Test'
+      state: 'Test'
+      country: 'Test'
+  card:
+    - fullName: 'Ronaldinho Gaucho'
+      cardNum: 4716190207394368
+      expMonth: 2
+      expYear: 2081
 -
   email: jim
   password: 'ncc-1701'

@@ -37,7 +37,7 @@ export class TrackResultComponent implements OnInit {
   constructor (private route: ActivatedRoute,private trackOrderService: TrackOrderService, private sanitizer: DomSanitizer) {}
 
   ngOnInit () {
-    this.orderId = this.route.snapshot.queryParams.id
+    this.orderId = this.route.snapshot.queryParams.id.replace(/[^\\d\w -]+/, '')
     this.trackOrderService.save(this.orderId).subscribe((results) => {
       this.results.orderNo = this.sanitizer.bypassSecurityTrustHtml(`<code>${results.data[0].orderId}</code>`)
       this.results.email = results.data[0].email
